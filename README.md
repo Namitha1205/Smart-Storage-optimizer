@@ -4,7 +4,7 @@
 [![SHA-256](https://img.shields.io/badge/Security-SHA--256-blue.svg)](https://csrc.nist.gov/publications/detail/fips/180-2/final)
 [![Firebase](https://img.shields.io/badge/Backend-Firebase_Firestore_%26_Hosting-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![CI/CD](https://github.com/Swetha-papani2005/smart-storage-optimizer/actions/workflows/ci.yml/badge.svg)](https://github.com/Swetha-papani2005/smart-storage-optimizer/actions)
+[![CI/CD](https://github.com/Namitha1205/Smart-Storage-optimizer/actions/workflows/ci.yml/badge.svg)](https://github.com/Namitha1205/Smart-Storage-optimizer/actions)
 
 An enterprise-grade, high-throughput storage optimization system designed in **C++17** and integrated with **Firebase** and an **interactive Web Dashboard**. The system rapidly traverses file systems, detects bit-identical files using a collision-free **three-tier SHA-256 hashing pipeline**, calculates wasted disk capacity, and provides safe, rollback-ready cleanup strategies.
 
@@ -160,7 +160,7 @@ The project includes pre-configured `render.yaml` and dynamic cloud port support
 1. **Push your code to GitHub** (see GitHub section below).
 2. Go to **[https://dashboard.render.com](https://dashboard.render.com)** and log in with your GitHub account.
 3. Click **"New +"** &rarr; Select **"Web Service"**.
-4. Choose your repository: `Swetha-papani2005/smart-storage-optimizer`.
+4. Choose your repository: `Namitha1205/Smart-Storage-optimizer`.
 5. Render will automatically detect the settings from `render.yaml`:
    * **Environment**: `Node`
    * **Start Command**: `node web-dashboard/server.js`
@@ -214,7 +214,7 @@ git commit -m "feat: initial commit of Smart Storage Optimization & Duplicate De
 git branch -M main
 
 # 3. Add your remote GitHub repository URL
-git remote add origin https://github.com/Swetha-papani2005/smart-storage-optimizer.git
+git remote add origin https://github.com/Namitha1205/Smart-Storage-optimizer.git
 
 # 4. Push to GitHub
 git push -u origin main
