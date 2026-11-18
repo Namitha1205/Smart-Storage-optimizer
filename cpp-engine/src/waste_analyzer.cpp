@@ -99,12 +99,12 @@ WasteAnalysisReport WasteAnalyzer::analyze(
     report.duplicate_groups_count = duplicates.size();
 
     for (const auto& group : duplicates) {
-        report.duplicate_files_count += group.files.size();
+        report.duplicate_files_count += group.files.size() - 1;
         std::uintmax_t wasted = group.wasted_bytes();
         report.total_wasted_bytes += wasted;
 
         report.waste_by_category[group.category] += wasted;
-        report.duplicate_count_by_category[group.category] += group.files.size();
+        report.duplicate_count_by_category[group.category] += group.files.size() - 1;
 
         if (!group.files.empty()) {
             std::string ext = group.files.front().extension;

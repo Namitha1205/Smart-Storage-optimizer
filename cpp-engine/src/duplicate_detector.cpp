@@ -95,6 +95,7 @@ std::vector<DuplicateGroup> DuplicateDetector::detect_duplicates(
         // Optimization: If file size is <= 4096 bytes, the partial hash is already the full hash!
         if (file_ptr->size_bytes <= 4096) {
             file_ptr->full_hash = file_ptr->partial_hash;
+            stats_.partial_hashes_reused++;
         } else {
             file_ptr->full_hash = SHA256::hash_file(file_ptr->full_path, 0);
             stats_.full_hashes_computed++;
@@ -125,7 +126,7 @@ std::vector<DuplicateGroup> DuplicateDetector::detect_duplicates(
             }
 
             stats_.duplicate_groups_found++;
-            stats_.duplicate_files_found += group.files.size();
+            stats_.duplicate_files_found += group.files.size() - 1;
             stats_.total_wasted_bytes += group.wasted_bytes();
 
             duplicate_groups.push_back(std::move(group));

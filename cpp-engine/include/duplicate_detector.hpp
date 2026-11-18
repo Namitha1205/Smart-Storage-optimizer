@@ -28,6 +28,7 @@ struct DetectionStats {
     size_t candidate_files_after_size_filter = 0;
     size_t candidate_files_after_partial_hash = 0;
     size_t full_hashes_computed = 0;
+    size_t partial_hashes_reused = 0;
     size_t duplicate_groups_found = 0;
     size_t duplicate_files_found = 0;
     std::uintmax_t total_wasted_bytes = 0;

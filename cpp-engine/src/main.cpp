@@ -178,6 +178,7 @@ int main(int argc, char* argv[]) {
     std::cout << "   • Candidates matching same size  : " << stats.candidate_files_after_size_filter << "\n";
     std::cout << "   • Candidates matching 4KB header : " << stats.candidate_files_after_partial_hash << "\n";
     std::cout << "   • Full SHA-256 stream hashes run : " << stats.full_hashes_computed << "\n";
+    std::cout << "   • Partial hashes reused         : " << stats.partial_hashes_reused << "\n";
     std::cout << "   • Verified duplicate groups      : " << stats.duplicate_groups_found << "\n";
     std::cout << "   • Redundant duplicate files      : " << stats.duplicate_files_found << "\n\n";
 
